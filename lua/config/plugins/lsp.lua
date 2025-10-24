@@ -226,6 +226,29 @@ return {
           },
         },
       })
+
+      -- Configure filetype detection
+      vim.filetype.add({
+	extension = {
+	  gohtml = 'html',
+	},
+      })
+
+      require('lspconfig').html.setup({
+	filetypes = { 'html', 'gohtml' },
+	capabilities = require('cmp_nvim_lsp').default_capabilities(),
+	settings = {
+	  html = {
+	    format = {
+	      enable = true,
+	    },
+	    hover = {
+	      documentation = true,
+	      references = true,
+	    },
+	  },
+	},
+      })
     end,
   },
 }
