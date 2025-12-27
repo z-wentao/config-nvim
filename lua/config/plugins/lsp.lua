@@ -197,6 +197,7 @@ return {
               shadow = true,              -- 变量覆盖
               nilness = true,             -- 空指针检查
               unusedwrite = true,         -- 未使用的赋值
+	      modernize = false,
             },
 
             -- 静态检查
