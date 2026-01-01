@@ -149,3 +149,8 @@ vim.api.nvim_create_autocmd("Syntax", {
     vim.cmd("syntax match markdownNotEqual '!=' conceal cchar=≠")
   end,
 })
+
+-- 快速交换上下
+vim.keymap.set("n", "J", ":m .+1<CR>==")
+vim.keymap.set("n", "K", ":m .-2<CR>==")
+
